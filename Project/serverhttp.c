@@ -9,6 +9,7 @@
 #include <netdb.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <arpa/inet.h>
 #define BUF_SIZE 1024
 #define CLADDR_LEN 100
 
