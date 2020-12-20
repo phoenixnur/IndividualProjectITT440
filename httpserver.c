@@ -7,7 +7,9 @@
 #include"time.h"
 #include"dirent.h"
 #include"netdb.h"
-
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <fcntl.h>
 #define BUF_SIZE 1024
 #define CLADDR_LEN 100
 
@@ -93,7 +95,7 @@ int main(int argc, char **argv) {
    printf("File sent...\n");
   }
   printf("Processing completed...\n");
-  close(connfd);
+  pclose(connfd);
  }
 
  close(sockfd);
