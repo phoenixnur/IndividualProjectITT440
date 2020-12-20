@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <unistd.h>
+#include <fcntl.h>
 /* Network */
 #include <netdb.h>
 #include <sys/socket.h>
@@ -84,6 +85,6 @@ int main(int argc, char **argv) {
     memset(buf, 0, BUF_SIZE);
   }
 
-  close(clientfd);
+  pclose(clientfd);
   return 0;
 }
